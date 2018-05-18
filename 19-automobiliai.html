@@ -213,7 +213,12 @@
             $('#save').css("display", "none");
             $('#done').css("display", "inline-block");
         }
-
+        function setInputFields(index) {
+            $('#data').val(cars[index].data);
+            $('#numeris').val(cars[index].numeris);
+            $('#atstumas').val(cars[index].atstumas);
+            $('#laikas').val(cars[index].laikas);
+        }
         function cleanUpInputFields() {
             $('#data').val(null);
             $('#numeris').val(null);
@@ -221,12 +226,7 @@
             $('#laikas').val(null);
         }
 
-        function setInputFields(index) {
-            $('#data').val(cars[index].data);
-            $('#numeris').val(cars[index].numeris);
-            $('#atstumas').val(cars[index].atstumas);
-            $('#laikas').val(cars[index].laikas);
-        }
+
 
         function drawTtable() {
             $('tbody').empty();
